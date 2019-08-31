@@ -1,0 +1,15 @@
+targets:
+  code_generators:code_generators:
+    builders:
+      code_generators|copyBuilder:
+        enabled: True
+
+builders:
+  copyBuilder:
+    import: 'package:code_generators/code_generators.dart'
+    builder_factories: ['copyBuilder']
+    build_extensions:
+      .txt:
+        - .copy.txt
+    build_to: source
+    auto_apply: root_package
