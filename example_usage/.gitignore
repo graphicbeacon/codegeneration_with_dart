@@ -7,9 +7,9 @@
 .packages
 
 # Remove the following pattern if you wish to check in your lock file
-pubspec.lock
+# pubspec.lock
 
-# Conventional directory for build outputs
+# Conventional directory for build projects
 build/
 
 # Directory created by dartdoc

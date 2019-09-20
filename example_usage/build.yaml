@@ -1,0 +1,12 @@
+targets:
+  code_generators_example:code_generators_example:
+    builders:
+      code_generators|copyBuilder:
+        generate_for:
+          - web/*
+      code_generators|markdownToHtmlBuilder:
+        generate_for:
+          - web/*
+        options:
+          pageTitle: 'Welcome to my website'
+          author: 'Jermaine Oppong'

@@ -3,6 +3,8 @@ targets:
     builders:
       code_generators|copyBuilder:
         enabled: True
+      code_generators|markdownToHtmlBuilder:
+        enabled: True
 
 builders:
   copyBuilder:
@@ -12,4 +14,12 @@ builders:
       .txt:
         - .copy.txt
     build_to: source
-    auto_apply: root_package
+    auto_apply: dependents
+  markdownToHtmlBuilder:
+    import: 'package:code_generators/code_generators.dart'
+    builder_factories: ['markdownToHtmlBuilder']
+    build_extensions:
+      .md:
+        - .html
+    build_to: source
+    auto_apply: dependents
