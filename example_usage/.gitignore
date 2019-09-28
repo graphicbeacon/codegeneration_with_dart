@@ -11,6 +11,7 @@
 
 # Conventional directory for build projects
 build/
+dist/
 
 # Directory created by dartdoc
 doc/api/

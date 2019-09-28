@@ -10,3 +10,7 @@ targets:
         options:
           pageTitle: 'Welcome to my website'
           author: 'Jermaine Oppong'
+      code_generators|blogHomepageBuilder:
+        enabled: True
+      code_generators|cleanupUnneededFiles:
+        enabled: True

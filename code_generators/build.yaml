@@ -5,6 +5,8 @@ targets:
         enabled: True
       code_generators|markdownToHtmlBuilder:
         enabled: True
+      code_generators|blogHomepageBuilder:
+        enabled: True
 
 builders:
   copyBuilder:
@@ -23,3 +25,16 @@ builders:
         - .html
     build_to: source
     auto_apply: dependents
+  blogHomepageBuilder:
+    import: 'package:code_generators/code_generators.dart'
+    builder_factories: ['blogHomepageBuilder']
+    build_extensions:
+      $web$:
+        - index.html
+    build_to: source
+    auto_apply: dependents
+
+post_process_builders:
+  cleanupUnneededFiles:
+    import: 'package:code_generators/code_generators.dart'
+    builder_factory: cleanupUnneededFiles
